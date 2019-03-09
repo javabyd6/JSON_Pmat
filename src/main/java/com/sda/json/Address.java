@@ -7,6 +7,18 @@ public class Address {
     private String city;
     private String street;
 
+    @Override
+    public String toString() {
+        return "Address{" +
+                "city='" + city + '\'' +
+                ", street='" + street + '\'' +
+                '}';
+    }
+
+    public Address(){
+
+    }
+
     public String getCity() {
         return city;
     }

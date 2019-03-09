@@ -8,6 +8,19 @@ public class Student {
     private String lastName;
     private Address address;
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", address=" + address +
+                '}';
+    }
+
+    public Student(){
+
+    }
+
     public String getName() {
         return name;
     }
