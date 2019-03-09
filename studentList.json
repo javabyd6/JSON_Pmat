@@ -3,7 +3,7 @@
     "name": "A",
     "lastName": "Z",
     "address": {
-      "city": "Bydgoszcz",
+      "city": "Toruń",
       "street": "Gdańska"
     }
   },
@@ -11,7 +11,7 @@
     "name": "B",
     "lastName": "Z",
     "address": {
-      "city": "Bydgoszcz",
+      "city": "Toruń",
       "street": "Długa"
     }
   },
@@ -19,7 +19,7 @@
     "name": "C",
     "lastName": "Z",
     "address": {
-      "city": "Bydgoszcz",
+      "city": "Toruń",
       "street": "Dworcowa"
     }
   }

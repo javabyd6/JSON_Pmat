@@ -1,6 +1,9 @@
 package com.sda.savejson;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.sda.json.Address;
+import com.sda.json.Person;
+import com.sda.json.Student;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,7 +17,7 @@ public class Main {
 
     static ObjectMapper mapper = new ObjectMapper();
 
-    public static void savePersons(){
+    public static void savePersons() {
         Person person1 = new Person("Paweł", "Matusiak", 28);
 
         try {
@@ -25,11 +28,11 @@ public class Main {
         }
     }
 
-    public static void createPersonsList(){
+    public static void createPersonsList() {
         Person person1 = new Person("Paweł", "Matusiak", 28);
         Person person2 = new Person("Remi", "Jakiśtam", 25);
-        Person person3 = new Person("BCD", "C", 10);
-        Person person4 = new Person("ABC", "B", 20);
+        Person person3 = new Person("asd", "C", 10);
+        Person person4 = new Person("poi", "B", 20);
 
         //tworzymy listę Person
         List<Person> personList = new ArrayList<Person>();
@@ -45,11 +48,11 @@ public class Main {
         }
     }
 
-    public static void createStudentList(){
+    public static void createStudentList() {
         List<Student> studentList = new ArrayList<Student>();
-        Student student1 = new Student("A", "Z", new Address("Bydgoszcz", "Gdańska"));
-        Student student2 = new Student("B", "Z", new Address("Bydgoszcz", "Długa"));
-        Student student3 = new Student("C", "Z", new Address("Bydgoszcz", "Dworcowa"));
+        Student student1 = new Student("A", "Z", new Address("Toruń", "Gdańska"));
+        Student student2 = new Student("B", "Z", new Address("Toruń", "Długa"));
+        Student student3 = new Student("C", "Z", new Address("Toruń", "Dworcowa"));
         studentList.add(student1);
         studentList.add(student2);
         studentList.add(student3);
