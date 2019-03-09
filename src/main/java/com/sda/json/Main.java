@@ -1,12 +1,9 @@
 package com.sda.json;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -24,15 +21,16 @@ public class Main {
         Person person4 = new Person("A", "B", 20);
         //tworzymy obiekt klasy ObjectMapper
         ObjectMapper mapper = new ObjectMapper();
-        //Zapisujemy instancję person1 jako JSON
+        //konieczność obsługi wyjątku
         try {
-//            String personStr = mapper.writeValueAsString(person1);
-//            System.out.println(personStr);
-//            Files.write(Paths.get("person.json"), personStr.getBytes());
+            //Zapisujemy instancję person1 jako JSON
+//            String personStr = mapper.writeValueAsString(person1);                    //alternatywna metoda zapisywania w JSONie
+//            Files.write(Paths.get("person.json"), personStr.getBytes());              //cd.
             mapper.writeValue(new File("person.json"), person1);
             //odczytujemy
             Person personRead = mapper.readValue(new File("person.json"), Person.class);        //musieliśmy stworzyć pusty konstruktor w klasie Person
             System.out.println(personRead.toString());
+            //zmieniliśmy domyślnie wygenerowany wyjątek na IOException
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -44,6 +42,7 @@ public class Main {
         personList.add(person3);
         personList.add(person4);
 
+        //konieczność obsługi wyjątku
         try {
             //zapisujemy listę do JSONa
             mapper.writeValue(new File("personList.json"), personList);
@@ -63,6 +62,7 @@ public class Main {
         studentList.add(student2);
         studentList.add(student3);
 
+        //konieczność obsługi wyjątku
         try {
             //zapisujemy listę do JSONa
             mapper.writeValue(new File("studentList.json"), studentList);
